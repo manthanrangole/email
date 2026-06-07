@@ -1,0 +1,34 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDEs and Editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.settings/
+.classpath
+.project
+.metadata/
+.factorypath
+bin/
+*.sublime-project
+*.sublime-workspace
+.vscode/
+
+# Local Environment / Credentials
+.env
+.env.local
+.env.*.local
+*.env
+src/main/resources/data/hr_emails.json
+
+# Exclude PDFs (CVs/Resumes) from being tracked in Git to protect personal data
+**/*.pdf
+
+# OS Metadata
+.DS_Store
+Thumbs.db
