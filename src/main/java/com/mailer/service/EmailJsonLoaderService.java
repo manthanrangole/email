@@ -1,14 +1,13 @@
-package com.manthan.mailer.service;
+package com.mailer.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.manthan.mailer.model.HrContact;
+import com.mailer.model.HrContact;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -36,12 +35,12 @@ public class EmailJsonLoaderService {
     }
 
     /**
-     * Parse HR contacts from a file path on disk.
+     * Parse HR contacts from an InputStream.
      */
-    public List<HrContact> loadFromFile(File file) throws IOException {
-        log.info("Parsing HR contacts from file: {}", file.getAbsolutePath());
-        List<HrContact> contacts = objectMapper.readValue(file, new TypeReference<>() {});
-        log.info("Parsed {} HR contacts from file", contacts.size());
+    public List<HrContact> loadFromInputStream(InputStream inputStream) throws IOException {
+        log.info("Parsing HR contacts from InputStream");
+        List<HrContact> contacts = objectMapper.readValue(inputStream, new TypeReference<>() {});
+        log.info("Parsed {} HR contacts from InputStream", contacts.size());
         return contacts;
     }
 

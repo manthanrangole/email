@@ -1,4 +1,4 @@
-package com.manthan.mailer.model;
+package com.mailer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

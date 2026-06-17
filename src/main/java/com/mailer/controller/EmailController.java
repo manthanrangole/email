@@ -1,11 +1,11 @@
-package com.manthan.mailer.controller;
+package com.mailer.controller;
 
-import com.manthan.mailer.dto.BulkEmailResponse;
-import com.manthan.mailer.model.EmailRequest;
-import com.manthan.mailer.model.HrContact;
-import com.manthan.mailer.service.EmailJsonLoaderService;
+import com.mailer.dto.BulkEmailResponse;
+import com.mailer.model.EmailRequest;
+import com.mailer.model.HrContact;
+import com.mailer.service.EmailJsonLoaderService;
 import jakarta.validation.Valid;
-import com.manthan.mailer.service.EmailService;
+import com.mailer.service.EmailService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -180,7 +180,7 @@ public class EmailController {
                                 .build());
             }
 
-            List<HrContact> contacts = jsonLoaderService.loadFromFile(resource.getFile());
+            List<HrContact> contacts = jsonLoaderService.loadFromInputStream(resource.getInputStream());
             log.info("Loaded {} contacts from classpath:data/hr_emails.json", contacts.size());
             BulkEmailResponse response = emailService.sendBulkEmails(contacts);
             return ResponseEntity.ok(response);

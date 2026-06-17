@@ -1,4 +1,4 @@
-package com.manthan.mailer.config;
+package com.mailer.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

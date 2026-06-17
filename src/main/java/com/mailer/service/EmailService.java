@@ -1,8 +1,8 @@
-package com.manthan.mailer.service;
+package com.mailer.service;
 
-import com.manthan.mailer.dto.BulkEmailResponse;
-import com.manthan.mailer.model.EmailRequest;
-import com.manthan.mailer.model.HrContact;
+import com.mailer.dto.BulkEmailResponse;
+import com.mailer.model.EmailRequest;
+import com.mailer.model.HrContact;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;

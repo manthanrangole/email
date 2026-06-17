@@ -1,4 +1,4 @@
-package com.manthan.mailer.dto;
+package com.mailer.dto;
 
 import lombok.Builder;
 import lombok.Data;

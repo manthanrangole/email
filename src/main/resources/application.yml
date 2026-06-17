@@ -5,8 +5,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    username: ${MAIL_USERNAME:dummy@gmail.com}
+    password: ${MAIL_PASSWORD:dummypassword}
     properties:
       mail.smtp.auth: true
       mail.smtp.starttls.enable: true
@@ -26,7 +26,7 @@ app:
   email:
     subject: "Application for Java Backend Developer Position"
     sender-name: "Manthan Rangole"
-    sender-email: ${MAIL_USERNAME}
+    sender-email: ${MAIL_USERNAME:dummy@gmail.com}
     delay-between-emails-ms: 1000
 
 springdoc:
